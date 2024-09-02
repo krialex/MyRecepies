@@ -1,0 +1,54 @@
+@import 'header';
+@import 'homePage';
+
+
+@media (max-width: 800px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 114px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+    .menu.active {
+        display: flex;
+        background-color: var(--blue);
+        width: auto;
+        padding: 10px 40px 20px;
+    }
+    .menu li {
+        margin: 10px 0;
+    }
+    .hamburger-icon {
+        display: block;
+    }
+    .spesific-content img {
+        max-width: 400px;
+    }
+ }
+
+ @media (max-width: 600px) {
+    .blogg-liste {
+        grid-template-columns: 1fr;
+    }
+    .spesific-content img {
+        max-width: 300px;
+    }
+    .about-section {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+    }
+ }
+
+ @media (max-width: 400px) {
+    .spesific-content img {
+        max-width: 250px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+ }

@@ -1,0 +1,29 @@
+main {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+ .home-img img {
+    width: 100%;
+    margin-top: 15px;
+ }
+ h2 {
+    margin-top: 50px;
+    font-family: var(--headerfont);
+ }
+.home-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 50px auto;
+}
+.home-text {
+    text-align: left;
+    padding: 15px;
+}
+.link-insta a {
+    text-decoration: none;
+    color: var(--blue);
+}

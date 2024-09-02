@@ -1,0 +1,18 @@
+.cta a {
+    color: #FFF;
+    text-decoration: none;
+}
+.cta, .contact-cta {
+    border: 1px solid var(--green);
+    width: -moz-available;
+    margin: 10% 20%;
+    padding: 10px 20px;
+    background-color: var(--green);
+    color: #FFF;
+    cursor: pointer;
+    
+}
+.cta:hover, .contact-cta:hover {
+    transform: scale(1.07);
+    transition-duration: 1s;
+}

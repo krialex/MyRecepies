@@ -1,0 +1,144 @@
+header {
+  display: flex;
+  background-color: var(--blue);
+  color: var(--white);
+  align-items: baseline;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+h1 {
+  font-family: var(--headerfont);
+}
+
+.logo img {
+  width: 50px;
+  border-radius: 50px;
+  margin-top: 10px;
+}
+
+.navigation {
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.hamburger-icon {
+  display: none;
+  font-size: 1.5em;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+li a:hover, .current {
+  text-decoration: underline;
+}
+
+main {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.home-img img {
+  width: 100%;
+  margin-top: 15px;
+}
+
+h2 {
+  margin-top: 50px;
+  font-family: var(--headerfont);
+}
+
+.home-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.home-text {
+  text-align: left;
+  padding: 15px;
+}
+
+.link-insta a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+@media (max-width: 800px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 114px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+  }
+  .menu.active {
+    display: flex;
+    background-color: var(--blue);
+    width: auto;
+    padding: 10px 40px 20px;
+  }
+  .menu li {
+    margin: 10px 0;
+  }
+  .hamburger-icon {
+    display: block;
+  }
+  .spesific-content img {
+    max-width: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .blogg-liste {
+    grid-template-columns: 1fr;
+  }
+  .spesific-content img {
+    max-width: 300px;
+  }
+  .about-section {
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+  }
+}
+@media (max-width: 400px) {
+  .spesific-content img {
+    max-width: 250px;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
