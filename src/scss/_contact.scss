@@ -1,0 +1,35 @@
+.form-error, .comment-error {
+    display: none;
+    color: red;
+    font-size: .5em;
+    padding: 0px 10px
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 30px;
+    margin: 30px auto;
+    background-color: var(--white);
+    text-align: left;
+}
+.form-lable {
+    display: flex;
+    flex-direction: column;
+    margin: 7px;
+    font-size: .9em;
+}
+#message {
+    height: 120px;
+}
+input {
+    padding: 3px;
+}
+.successMessage {
+    border: 1px solid var(--green);
+    width: fit-content;
+    padding: 20px 30px;
+    background-color: var(--green);
+    color: #FFF;
+    margin: 0px auto;
+}
