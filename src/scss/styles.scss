@@ -1,5 +1,11 @@
 @use 'header';
+@use 'navigation';
 
+
+a {
+    text-decoration: none;
+    color: black;
+}
 
 .displayPosts {
     display: flex;
