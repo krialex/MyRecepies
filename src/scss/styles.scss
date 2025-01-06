@@ -1,0 +1,17 @@
+@use 'header';
+
+
+.displayPosts {
+    display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.postCard {
+    max-width: 400px;
+    background-color: antiquewhite;
+}
+
+.postCard img {
+    width: 100%;
+}
