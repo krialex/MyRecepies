@@ -1,6 +1,8 @@
-@use 'header';
-@use 'navigation';
+$headerFont: 'Sour Gummy', serif;
+$secondaryFont: 'Josefin Sans', serif;
 
+@import 'header';
+@import 'navigation';
 
 a {
     text-decoration: none;

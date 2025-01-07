@@ -2,5 +2,29 @@
     display: flex;
     gap: 40px;
     margin: 20px auto;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+// sjekk branch du er på! jeg driver å fikser på styling av header...
+
+h1 {
+    font-family: $headerFont;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menu li a {
+    font-family: $secondaryFont;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 800px) {
+    .header-container {
+        gap: 40px
+    }
 }
