@@ -1,35 +1,29 @@
-import { postsAPI } from '../js/auth/variables.js';
+import { getPosts } from './auth/getAllPosts.js';
+import { featuredPostsHtml } from './ui/featuredPostsHtml.js';
+import { featuredPosts } from './auth/featuredPosts.js';
+import { htmlForPosts } from './ui/htmlForPosts.js';
 
-async function getPosts() {
-    const postContainer = document.querySelector(".displayPosts");
-    postContainer.innerHTML += "";
+async function init() {
+    const loader = document.querySelector('.loader');
+    loader.style.display = 'block';
 
     try {
-        const response = await fetch(postsAPI);
-        const result = await response.json();
+        const postData = await getPosts();
+        const allPosts = postData;
 
-        console.log(result);
+        console.log(allPosts);
 
-        result.forEach(post => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(post.content.rendered, 'text/html');
+        loader.style.display = 'none';
 
-            const img = doc.querySelector('img');
-            const imgSrc = img ? img.getAttribute('src') : null;
+        const postContainer = document.querySelector('.feed-container');
+        htmlForPosts(allPosts, postContainer);
 
-            if(imgSrc) {
-                postContainer.innerHTML += `<div class="container postCard">
-                <a href="spesificblog.html">
-                <h2>${post.title.rendered}</h2>
-                <img src="${imgSrc}" alt="${img.getAttribute('alt') || 'Post image'}">
-                </a>
-                </div>`;
-            }
+        const topPosts = featuredPosts(allPosts);
+        featuredPostsHtml(topPosts);
 
-        });
-    } catch(error) {
-        console.log(error, "could not fetch posts..")
+        console.log('hva skjer her??')
+    } catch (error) {
+        console.log('dette fungerte ikke nei...', error);
     }
 }
-getPosts();
-
+init();

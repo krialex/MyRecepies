@@ -1,25 +1,18 @@
 $headerFont: 'Sour Gummy', serif;
 $secondaryFont: 'Josefin Sans', serif;
+$userFeedbackColor: #FF7168;
 
 @import 'header';
 @import 'navigation';
+@import 'images';
+@import 'feed';
+@import 'userFeedback';
+
+body {
+    background-color: #F2EFE9;
+}
 
 a {
     text-decoration: none;
     color: black;
-}
-
-.displayPosts {
-    display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-
-.postCard {
-    max-width: 400px;
-    background-color: antiquewhite;
-}
-
-.postCard img {
-    width: 100%;
 }
