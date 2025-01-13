@@ -21,7 +21,6 @@ async function init() {
         const topPosts = featuredPosts(allPosts);
         featuredPostsHtml(topPosts);
 
-        console.log('hva skjer her??')
     } catch (error) {
         console.log('dette fungerte ikke nei...', error);
     }

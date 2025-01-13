@@ -11,7 +11,7 @@ export function htmlForPosts(post, container) {
         if(imgSrc) {
             container.innerHTML += `<div class="container postCard">
             <a href="spesificblog.html">
-            <h3>${post.title.rendered}</h3>
+            <h3 class="feed-h3">${post.title.rendered}</h3>
             <img src="${imgSrc}" alt="${img.getAttribute('alt') || 'Post image'}">
             </a>
             </div>`;
