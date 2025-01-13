@@ -40,6 +40,9 @@ async function init() {
                     htmlForSinglePost(singlePost, onePostContainer);
 
                     console.log(singlePost);
+
+
+
                 } else {
                     console.log('Post med ID ' + postId + ' ble ikke funnet');
                 }
