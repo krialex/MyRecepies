@@ -37,6 +37,16 @@
     max-width: 200px;
     margin: 10px auto;
   }
+
+  .nav-list {
+    display: flex;
+    gap: 10px;
+    font-size: 1.1rem;
+  }
+
+  .nav-list li {
+    list-style-type: none;
+  }
   
   @media (max-width: 800px) {
     .hamburger-icon {

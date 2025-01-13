@@ -2,6 +2,7 @@ import { getPosts } from './auth/getAllPosts.js';
 import { featuredPostsHtml } from './ui/featuredPostsHtml.js';
 import { featuredPosts } from './auth/featuredPosts.js';
 import { htmlForPosts } from './ui/htmlForPosts.js';
+import { getToTop } from './ui/toTopBtn.js';
 
 async function init() {
     const loader = document.querySelector('.loader');
@@ -26,3 +27,5 @@ async function init() {
     }
 }
 init();
+
+getToTop();

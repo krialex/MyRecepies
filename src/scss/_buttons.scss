@@ -22,3 +22,9 @@
 .cta a:hover, .toTopBtn:hover {
     color: $userFeedbackColor;
 }
+
+#toTopButton {
+    display: none;
+    position: fixed;
+    bottom: 0px;
+}

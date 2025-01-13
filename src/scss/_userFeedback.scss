@@ -1,3 +1,7 @@
+.current {
+  text-decoration: underline;
+} 
+
 .loader {
     --d: 22px;
     width: 4px;
@@ -20,6 +24,3 @@
     }
   }
 
-  .current {
-    color: $userFeedbackColor;
-  } //dette funker ikke..
