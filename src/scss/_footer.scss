@@ -1,0 +1,13 @@
+footer {
+    display: flex;
+    max-width: 200px;
+    margin: 10px auto;
+    font-size: 4rem;
+    gap: 30px;
+    justify-content: center;
+}
+
+.icons a i {
+    margin: 10px auto;
+    color: $userFeedbackColor;
+}
