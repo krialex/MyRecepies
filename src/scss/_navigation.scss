@@ -31,6 +31,12 @@
       }
     }
   }
+
+  .goToTop {
+    display: flex;
+    max-width: 200px;
+    margin: 10px auto;
+  }
   
   @media (max-width: 800px) {
     .hamburger-icon {

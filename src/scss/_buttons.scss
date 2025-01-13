@@ -1,0 +1,24 @@
+.cta {
+    margin: 35px;
+    border: 1px solid $userFeedbackColor;
+    background-color: $userFeedbackColor;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+}
+
+.cta:hover {
+    border: 1px solid $userFeedbackColor;
+    background-color: #FFF;
+    transform: scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cta a, .toTopBtn {
+    color: #FFF;
+}
+
+.cta a:hover, .toTopBtn:hover {
+    color: $userFeedbackColor;
+}

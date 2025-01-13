@@ -15,19 +15,21 @@
 </head>
 <body>
     <header>
-        <div class="logo"><a href="index.html"><img src="Assets/bilder/logo3.png" alt="Logo"></a></div>
+        <section class="container header-container">
+        <div class="logo"><a href="index.html"><img src="/images/muffin.webp" alt="Logo" class="logo-img"></a></div>
         <a href="index.html"><h1>Kiks lager mat</h1></a>
         <div>
             <label for="hamburger-menu" class="hamburger-icon"><i class="fa-solid fa-bars"></i></label>
             <input type="checkbox" id="hamburger-menu">
             <nav class="navigation">
                 <ul class="menu">
-                    <li><a href="blogs.html" class="current">Oppskrifter</a></li>
+                    <li class="current"><a href="blogs.html">Oppskrifter</a></li>
                     <li><a href="about.html">Om meg</a></li>
                     <li><a href="contact.html">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
+    </section>
     </header>
     <main>
         <section class="nav-two">
@@ -37,14 +39,16 @@
             </ul>
         </section>
         <h2>Oppskrifter</h2>
-        <section class="blog-main">
-            <div class="blogg-liste" id="blogg-liste">
-                <div class="blogg-list-h2"></div>
-                <div class="blogg-list-img"></div>
+
+        <div class="loader"></div>
+
+            <div class="feed-container"></div>
+
+            <div class="goToTop">
+                <button class="cta btn toTopBtn" id="toTopButton">Gå til toppen</button>
             </div>
-            <button class="cta" id="loadMoreButton">Vis flere</button>
-            <button class="cta" id="toTopButton">Gå til toppen</button>
-        </section>
+           
+
     </main>
     <footer>
         <div class="icons">

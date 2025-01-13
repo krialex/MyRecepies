@@ -9,6 +9,7 @@ $userFeedbackColor: #FF7168;
 @import 'userFeedback';
 @import 'carousell';
 @import 'homeText';
+@import 'buttons';
 
 body {
     background-color: #F2EFE9;
@@ -17,4 +18,8 @@ body {
 a {
     text-decoration: none;
     color: black;
+}
+
+.home-main .feed-container {
+    display: none;
 }
