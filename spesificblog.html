@@ -45,29 +45,21 @@
         <div class="loader"></div>
       
         <div class="comment-section">
-            <h3>Legg igjen en kommentar</h3>
-            <form class="comment-form">
-                <input type="hidden" id="postId" value="3345" />
-                <div>
-                    <lable for="commentName" class="form-lable">Navn
-                        <input type="text" id="commentName" name="commentName" placeholder="Ditt navn">
-                    </lable>
-                    <div class="comment-error" id="commentName-error">Fyll inn ditt navn</div>
+            <h3 class="feed-h3">Legg igjen en kommentar</h3>
+            <form>
+                <div class="form-group row">
+                  <label for="exampleFormControlInput1" class="col-9">Brukernavn</label>
+                  <input type="text" class="form-control col-9" id="exampleFormControlInput1">
                 </div>
-                <div>
-                    <label for="commentEmail" class="form-lable">Email
-                        <input type="text" id="commentEmail" name="commentEmail" placeholder="Din email-adresse">
-                    </label>
-                    <div class="comment-error" id="commentEmail-error">Skriv din email-addresse</div>
+                <div class="form-group row">
+                  <label for="exampleFormControlTextarea1" class="col-9">Melding</label>
+                  <textarea class="form-control col-9" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
-                <div>
-                    <label for="commentMessage" class="form-lable">Kommentar
-                        <textarea id="commentMessage" name="commentMessage" placeholder="Skriv din kommentar"></textarea>
-                    </label>
-                    <div class="comment-error" id="commentMessage-error">Fyll inn ditt navn</div>
-                </div>
-                <button type="button" class="contact-cta" onclick="sendComments">Send inn</button>
-            </form>
+                <button class="btn cta messageBtn">Send</button>
+
+                <div class="form-group comment-from-users"></div>
+
+              </form>
         </div>
       
     </main>

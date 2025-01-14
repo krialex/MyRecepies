@@ -19,7 +19,7 @@
     color: #FFF;
 }
 
-.cta a:hover, .toTopBtn:hover {
+.cta a:hover, .toTopBtn:hover, .messageBtn:hover {
     color: $userFeedbackColor;
 }
 
@@ -28,4 +28,9 @@
     position: fixed;
     bottom: 0px;
     right: 20px;
+}
+
+.messageBtn {
+    color: #FFF;
+    width: 80%;
 }

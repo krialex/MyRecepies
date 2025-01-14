@@ -1,0 +1,15 @@
+.comment-section {
+    background-color: #FFF;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 6px;
+}
+
+.feed-h3 {
+    font-family: $headerFont;
+}
