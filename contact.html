@@ -15,7 +15,8 @@
 </head>
 <body>
     <header>
-        <div class="logo"><a href="index.html"><img src="Assets/bilder/logo3.png" alt="Logo"></a></div>
+        <section class="container header-container">
+        <div class="logo"><a href="index.html"><img src="/images/cake.webp" alt="Logo" class="logo-img"></a></div>
         <a href="index.html"><h1>Kiks lager mat</h1></a>
         <div>
             <label for="hamburger-menu" class="hamburger-icon"><i class="fa-solid fa-bars"></i></label>
@@ -24,49 +25,36 @@
                 <ul class="menu">
                     <li><a href="blogs.html">Oppskrifter</a></li>
                     <li><a href="about.html">Om meg</a></li>
-                    <li><a href="contact.html" class="current">Kontakt</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
+    </section>
     </header>
+    <hr>
     <main>
         <section class="nav-two">
             <ul class="nav-list">
                 <li><a href="/">Forsiden /</a></li>
-                <li>Kontakt meg</li>
+                <li class="current">Kontakt meg</li>
             </ul>
         </section>
-        <h2>Kontakt meg</h2>
-        <div class="success"></div>
-        <div class="kontakt-skjema">
-            <form class="contact-form">
-                <div>
-                    <lable for="name" class="form-lable">Navn
-                        <input type="text" id="name" name="name" placeholder="Ditt navn">
-                    </lable>
-                    <div class="form-error" id="name-error">Fyll inn ditt navn</div>
-                </div>
-                <div>
-                    <label for="email" class="form-lable">Email
-                        <input type="text" id="email" name="email" placeholder="Din email-adresse">
-                    </label>
-                    <div class="form-error" id="email-error">Skriv din mailaddresse her</div>
-                </div>
-                <div>
-                    <label for="subject" class="form-lable">Emne
-                        <input type="text" id="subject" name="subject" placeholder="Emne">
-                    </label>
-                    <div class="form-error" id="subject-error">Skriv inn emne på meldingen her, minst 15 tegn</div>
-                </div>
-                <div>
-                    <label for="message" class="form-lable">Din melding
-                        <textarea id="message" name="message" placeholder="Din melding"></textarea>
-                    </label>
-                    <div class="form-error" id="message-error">Du må skrive minst 25 tegn</div>
-                </div>
 
-                <button class="cta">Send melding</button>
-            </form>
+        <div class="success"></div>
+
+        <div class="contact-form">
+            <h2>Kontakt meg</h2>
+            <form>
+                <div class="form-group row">
+                  <label for="exampleFormControlInput1" class="col-9">Din email</label>
+                  <input type="email" class="form-control col-9" id="exampleFormControlInput1">
+                </div>
+                <div class="form-group row">
+                  <label for="exampleFormControlTextarea1" class="col-9">Melding</label>
+                  <textarea class="form-control col-9" id="exampleFormControlTextarea1" rows="10"></textarea>
+                </div>
+                <button class="btn cta messageBtn">Send</button>
+              </form>
         </div>
 
     </main>
