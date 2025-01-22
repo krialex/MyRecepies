@@ -1,5 +1,6 @@
 <IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "https://unipop.no"
+    SetEnvIf Origin "http(s)?://(localhost(:[0-9]+)?|unipop.no)" AccessControlAllowOrigin=$0
+    Header set Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
     Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
     Header set Access-Control-Allow-Headers "Content-Type, Authorization"
 </IfModule>

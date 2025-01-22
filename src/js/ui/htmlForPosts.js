@@ -15,7 +15,6 @@ export function htmlForPosts(post, container) {
             <img src="${imgSrc}" alt="${img.getAttribute('alt') || 'Post image'}">
             </a>
             </div>`;
-        }
-
+        } 
     });
 }

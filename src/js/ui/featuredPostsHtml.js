@@ -17,7 +17,7 @@ export function featuredPostsHtml(topPosts) {
         const parser = new DOMParser();
         const doc = parser.parseFromString(post.content.rendered, 'text/html');
         const img = doc.querySelector('img');
-        const imgSrc = img ? img.getAttribute('src') : 'default-image.jpg';
+        const imgSrc = img ? img.getAttribute('src') : '/images/default-img.webp';
 
         carouselHTML += `
             <div class="carousel-item ${index === 0 ? 'active' : ''}">

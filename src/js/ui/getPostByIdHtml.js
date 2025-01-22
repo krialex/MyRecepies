@@ -16,7 +16,7 @@ export function htmlForSinglePost(post, onePostContainer) {
     if (imgSrc) {
         onePostContainer.innerHTML += `
         <div class="container onePost">
-                <h3 class="feed-h3 onePostH3">${post.title.rendered}</h3>
+                <h3 class="feed-h3 onePost">${post.title.rendered}</h3>
                 <div>Publisert: ${formattedDate}</div>
                 <p>${post.content.rendered}</p>
         </div>`;
