@@ -1,17 +1,20 @@
 export function displayComments(comments, commentsContainer) {
-    commentsContainer.innerHtml = '';
+    commentsContainer.innerHTML = '';
 
     if (comments.length === 0) {
-        commentsContainer.innerHtml = '<div>Det er ingen kommentarer her enda.. Bli den første til å kommentere!</div>';
+        commentsContainer.innerHTML = '<div>Det er ingen kommentarer her enda.. Bli den første til å kommentere!</div>';
         return;
     }
 
     comments.forEach(comment => {
+        const avatarUrl = comment.author_avatar_urls["48"] || '/images/default-img.webp';
         const commentHtml = `<div class="comment">
-                            <h4>${comment.author_name}</h4><p>${comment.content.rendered}</p>
+                            <div class="header-comment"><img src="${avatarUrl}" alt="avatar-image">
+                            <h4>${comment.author_name}</h4></div>
+                            <p>${comment.content.rendered}</p>
                             <small>Publisert: ${new Date(comment.date).toLocaleString('no-NO')}</small>
-                            </div>`;
+                            <hr></div>`;
 
-        commentsContainer.innerHtml += commentHtml;
+        commentsContainer.innerHTML += commentHtml;
     });
-} //her holder jeg på enda. funker ikke.
+} 

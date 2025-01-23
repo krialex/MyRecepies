@@ -30,6 +30,7 @@ export function htmlForSinglePost(post, onePostContainer) {
         navItem.textContent = post.title.rendered;
         navItem.classList.add("current");
         idInNav.appendChild(navItem);
+
     } else {
         console.log('Det gikk ikke å finne tittel til id i posten.');
     }

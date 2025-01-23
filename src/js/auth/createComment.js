@@ -1,16 +1,24 @@
-export async function createComment(id, author_name, author_email, content) {
-    const commentUrl = await fetch('https://unipop.no/bloggapi/wp-json/wp/v2/comments', {
+export async function createComment(postId, author_name, author_email, content) {
+    try {   
+    const commentUrl = await fetch(`https://unipop.no/bloggapi/wp-json/wp/v2/comments`, {
         headers: {
             'Content-Type': 'application/json',
         },
         method: 'POST',
-        body: JSON.stringify({ id, author_name, author_email, content }),
+        body: JSON.stringify({ 
+            post: postId, 
+            author_name,
+            author_email, 
+            content }),
     });
 
-    if (commentUrl.ok) {
-        await commentUrl.json();
-        console.log("klarte ikke å sende POST på kommentar.");
+    if (!commentUrl.ok) {
+        throw new Error('Kunne ikke sende kommentar: ' + commentUrl.statusText);
     }
-    throw console.error('Could not send POST comment..');
-    
-} // her holder jeg på enda.. funker ikke.
+    console.log('Kommentar sendt!', await commentUrl.json());
+} catch (error) {
+    console.error('Feil ved sending av kommentar:', error);
+    throw error;
+}
+  
+} 

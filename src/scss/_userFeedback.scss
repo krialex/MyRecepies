@@ -2,6 +2,12 @@
   text-decoration: underline;
 } 
 
+.error-message {
+  color: red;
+  font-size: .8rem;
+  display: none;
+}
+
 .loader {
     margin: 20px auto;
     --d: 22px;

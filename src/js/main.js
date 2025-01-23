@@ -4,6 +4,10 @@ import { featuredPosts } from './auth/featuredPosts.js';
 import { htmlForPosts } from './ui/htmlForPosts.js';
 import { getToTop } from './ui/toTopBtn.js';
 import { htmlForSinglePost } from './ui/getPostByIdHtml.js';
+import { initComments } from './event/initComments.js';
+import { sendCommentForm } from './event/sendCommentForm.js';
+import { getPostIdFromUrl } from './auth/getIdFromUrl.js';
+
 
 async function init() {
     const loader = document.querySelector('.loader');
@@ -41,7 +45,9 @@ async function init() {
 
                     console.log(singlePost);
 
+                    await initComments(postId);
 
+                    sendCommentForm(postId); 
 
                 } else {
                     console.log('Post med ID ' + postId + ' ble ikke funnet');
@@ -53,10 +59,7 @@ async function init() {
         console.log('dette fungerte ikke nei...', error);
     }
 
-    function getPostIdFromUrl() {
-        const params = new URLSearchParams(window.location.search);
-        return params.get('id');
-    }
+    getPostIdFromUrl();
 }
 init();
 
